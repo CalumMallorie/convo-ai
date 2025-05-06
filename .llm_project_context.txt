@@ -1,0 +1,76 @@
+Project: Convo-AI - Local AI Assistant
+
+Goal: Build a locally-hosted AI assistant with natural conversation capabilities, optimized for Mac M-series chips.
+
+YOUR INSTRUCTIONS:
+1. Update project context after milestones.
+2. Run reports which save to `reports/` after milestones.
+3. This project is ran with minimal human oversight. Make sure to refresh your view of the wider picture often.
+
+Core Components:
+1. LLM Integration (Ollama)
+   - Support for multiple models (Mistral, Phi-3)
+   - Streaming responses
+   - Error handling and retries
+   - Model switching capability
+
+2. Text-to-Speech (TTS)
+   - Sesame CSM-1B integration
+   - MPS (Metal Performance Shaders) optimization
+   - Audio file management
+   - Resource cleanup
+
+3. Mac Optimizations
+   - MPS device support
+   - GPU layer configuration
+   - Batch size optimization
+   - Memory management
+
+4. Testing & Quality
+   - Comprehensive test suite
+   - Coverage reporting
+   - Performance benchmarks
+   - Error handling validation
+
+5. Project Management
+   - Progress tracking
+   - Performance metrics
+   - Demo scripts
+   - Documentation
+
+Development Guidelines:
+1. Code Style
+   - Use type hints
+   - Write short, focused functions
+   - Include docstrings
+   - Follow functional programming principles
+
+2. Testing
+   - Write tests for all new features
+   - Maintain high coverage
+   - Include edge cases
+   - Document test scenarios
+
+3. Performance
+   - Monitor memory usage
+   - Track response times
+   - Optimize for M-series chips
+   - Profile critical paths
+
+4. Documentation
+   - Keep README updated
+   - Document API changes
+   - Include usage examples
+   - Maintain changelog
+
+Current Status:
+- LLM client with streaming support ✓
+- TTS client with MPS optimization ✓
+- Basic test suite ✓
+- Configuration system ✓
+
+Next Steps:
+1. Enhance test coverage
+2. Add performance benchmarks
+3. Create demo scripts
+4. Set up reporting system

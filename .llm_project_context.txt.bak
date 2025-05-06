@@ -1,0 +1,200 @@
+Below is a “least-pain” playbook for getting a Sesame-style talking assistant on a machine with no GPU, while still keeping the normal (PG-13) filters in place.
+In one evening you can have: microphone input → smart LLM → Sesame CSM-1B text-to-speech → speakers, all running either on your CPU or on a cheap rented GPU for realtime speed.
+
+⸻
+
+1 What you’ll be wiring together
+
+Layer	Recommended component	Why
+LLM (text)	Phi-3-mini (3 B) or Gemma-2 B-IT in GGUF Q4 quantisation	Both beat GPT-3.5 on many tasks yet stay light enough for CPU-only inference at 5-7 t/s on a modern laptop  ￼ ￼
+Voice (TTS)	Sesame CSM-1B weights	Needs ≈4 GB VRAM or fits in main RAM; completely unfiltered so you add your own moderation  ￼ ￼
+Glue/API	sesame_csm_openai Docker image (community)	Exposes CSM through the OpenAI /v1/audio/speech endpoint, so any UI that already speaks ChatGPT can use it  ￼
+UI / mic & speakers	OpenWebUI “Advanced Voice Mode” branch	Push-to-talk web UI; streams partial LLM output straight into CSM for low latency  ￼
+
+All four pieces are Apache/MIT-licensed and play nicely together.
+
+⸻
+
+2 Running everything on your CPU (free & offline)
+	1.	Install the runtime stack
+
+brew install ollama           # or apt-get on Linux
+docker pull ghcr.io/phildougherty/sesame_csm_openai:latest
+git clone https://github.com/OpenWebUI/OpenWebUI.git
+
+
+	2.	Pull a tiny but capable model
+
+ollama pull phi3:4b-q4_0      # 4-bit file ~1.4 GB
+
+Q4_0 remains the fastest quant for pure-CPU inference  ￼.
+
+	3.	Start the pieces
+
+# terminal 1 – LLM
+ollama serve
+
+# terminal 2 – Sesame TTS (maps OpenAI route)
+docker run -p 5000:5000 phildougherty/sesame_csm_openai
+
+# terminal 3 – UI
+cd OpenWebUI && docker compose up
+
+
+	4.	Open http://localhost:3000, pick Advanced Voice Mode and enter:
+OpenAI base URL: http://localhost:5000/v1
+OpenAI key: anything (the service ignores it)
+
+What kind of speed to expect on CPU
+	•	Phi-3-mini Q4 on a 12-thread laptop CPU: 6–7 tokens/s (≈150 wpm)  ￼ ￼
+	•	CSM-1B on pure CPU renders ~0.8× realtime (1 s of speech = 1.3 s compute). Voice lag is noticeable but usable for short replies  ￼.
+
+If that is too slow, jump to §3 and rent a GPU only when you chat.
+
+⸻
+
+3 Burst to a cloud GPU when you need realtime
+
+Provider	Cheapest card that beats CPU	Typical price	Notes
+Vast.ai	RTX 3090 (24 GB)	$0.18 / h median  ￼	Pre-built snapshot “Ollama + CSM” images exist
+RunPod	A5000 (24 GB)	$0.26 / h community tier  ￼	One-click “Secure Cloud” pods; billed by the minute
+Cloudflare Workers AI	Serverless A100 slices	$-per-request, free tier available  ￼	Easiest if you only need TTS and keep the LLM local
+
+CSM-1B needs ~4 GB VRAM, so even a 10 GB card leaves room for the LLM or supersampling  ￼.
+Batching one-second chunks gives real-time speech at <200 ms lag on an A5000.
+
+⸻
+
+4 Keeping the content “PG-13”
+
+Because CSM itself is uncensored, insert moderation between the mic transcription and the LLM:
+
+graph LR
+  Mic --> Whisper(STT)
+  Whisper --> Filter{OpenAI Moderation API<br>or FastFilter.py}
+  Filter -->|clean text| LLM
+  LLM --> CSM
+  CSM --> Speakers
+
+Adding OpenAI’s free moderation endpoint costs < $0.01 per 1000 requests and blocks disallowed content before it ever reaches the speech layer.
+
+⸻
+
+5 Step-by-step cheat-sheet (copy-paste)
+
+# 1. CPU-only dev laptop
+brew install ollama
+ollama pull gemma:2b-q4_0
+
+# 2. Voice server
+docker run -d --name csm -p 5000:5000 \
+  ghcr.io/phildougherty/sesame_csm_openai:latest
+
+# 3. Web UI with mic
+git clone https://github.com/OpenWebUI/OpenWebUI
+cd OpenWebUI && docker compose up -d
+
+# 4. (optional) spin up Vast.ai 3090 when travelling
+vast connect <instance-id> 3000:3000 5000:5000
+
+
+
+⸻
+
+6 Key take-aways
+	•	You don’t need a GPU for a Sesame-style assistant if you accept ~1 s lag and 6 t/s text speed.
+	•	The quickest fully-open stack today is: Ollama → Phi-3-mini Q4 → sesame_csm_openai → OpenWebUI.
+	•	When you need faster responses, rent a GPU for pennies per hour or call CSM through Cloudflare’s serverless edge.
+	•	Moderation is entirely in your hands; drop an inexpensive filter before the LLM to stay safe.
+
+Enjoy your locally-hosted, polite-but-chatty AI!
+
+In a sentence: Yes—on an M3 Max you can drive both the language-model and Sesame’s CSM-1B speech model on the laptop’s 40-core Apple GPU through Apple’s Metal (MPS) or Apple’s newer MLX stack; the cleanest routes today are (a) run Ollama or LM Studio natively (not in Docker) for the LLM, and (b) run CSM-1B with either PyTorch-MPS or the MLX-enabled community fork—both are already benchmarked on M-series Macs.
+
+⸻
+
+1 Why bother with the GPU?
+
+Apple’s unified-memory GPUs feed the neural layers ~780 tokens/s in llama.cpp’s Q4 mode on an M3 Max—roughly 10-12× the CPU path and near RTX 3090 territory, while staying under 30 W in practice  ￼.  For speech, CSM-1B on MPS/MLX now renders comfortably faster than real time on the same chip  ￼ ￼.
+
+⸻
+
+2 LLM side: three proven options
+
+Option	GPU path	How to install	Gotchas / tips
+Ollama (CLI)	llama.cpp + Metal	brew install ollama or download the native DMG	Don’t run the Docker image—Docker hides the GPU  ￼ ￼
+LM Studio	Apple MLX engine (since v0.3.4)	Drag-and-drop app bundle	Uses MLX automatically; just pick a GGUF model  ￼
+DIY llama.cpp	Build with LLAMA_METAL=1	make -j LLAMA_METAL=1 then run ./main -m model.gguf -ngl 32	Adjust -ngl (GPU layers) for memory; see M-series benchmark thread for guidance  ￼
+
+Verification: open Activity Monitor → Window → GPU History and watch for spikes; in Ollama ollama run phi3 will print “mps” if Metal is active  ￼.
+
+⸻
+
+3 Speech side: Sesame CSM-1B on Apple GPU
+
+3.1 PyTorch-MPS route (simplest)
+	1.	Install PyTorch nightly with MPS:
+
+pip install --pre torch torchvision torchaudio \
+     --extra-index-url https://download.pytorch.org/whl/nightly/cpu
+
+(MPS wheels are universal for M-series  ￼)
+
+	2.	Clone Sesame and run with device="mps":
+
+from generator import load_csm_1b
+gen = load_csm_1b("mps")
+wav = gen.generate(text="Hello from M3 Max!", speaker=0)
+
+The official macOS walk-through follows exactly this pattern  ￼.
+
+3.2 MLX route (fastest, less RAM)
+
+The community repo akashjss/sesame-csm compiles the model into MLX kernels; it’s ~30 % faster and ~25 % lighter in RAM on an M3 Max:
+
+git clone https://github.com/akashjss/sesame-csm
+cd sesame-csm && pip install -r requirements.txt
+python run.py --device mlx --text "GPU speech test"
+
+￼
+
+⸻
+
+4 Putting it together (one-liner demo)
+
+# 1. Language model (GPU)
+ollama pull phi3:mini && ollama serve &
+
+# 2. Voice server (GPU via MPS)
+python -m pip install sesame_csm_openai && \
+sesame_csm_openai --device mps &
+
+# 3. Chat UI
+open https://openwebui.ai
+
+OpenWebUI’s Advanced Voice Mode will stream tokens straight to CSM; plug in
+Base URL: http://localhost:5000/v1, any key.
+
+⸻
+
+5 Common pitfalls & fixes
+	•	Docker hides Metal – always install Ollama/LM Studio natively  ￼ ￼
+	•	Homebrew PyTorch lacks MPS kernels – use the official wheels or Conda nightlies  ￼
+	•	Large models stall – keep quantised size < 32 GB to stay in the M3 Max’s GPU allocation window; llama.cpp’s Q4-K_M or MLX’s .mlx weights fit 13 B comfortably  ￼
+	•	Speed looks odd – Activity Monitor shows “memory pressure” when the unified pool swaps; close browser tabs or use -ctx 4096 not 8192.
+
+⸻
+
+6 If you hit the ceiling
+	•	ANE (Neural Engine) is still off-limits for third-party LLMs on M-series; GPU is the only Apple-supported accelerator for now  ￼.
+	•	For 70 B models, stream the LLM from a cloud GPU and keep CSM local—latency stays < 250 ms on a decent uplink.
+
+⸻
+
+TL;DR checklist for your M3 Max
+	1.	Install Ollama or LM Studio natively—GPU kicks in automatically.
+	2.	Clone Sesame CSM-1B and run with device="mps" or use the MLX fork.
+	3.	Wire them through OpenWebUI (or anything that speaks the OpenAI API).
+	4.	Confirm GPU load in Activity Monitor; enjoy near-desktop-class speeds with no extra hardware.
+
+Happy hacking!
