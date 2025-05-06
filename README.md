@@ -1,7 +1,6 @@
 # Convo AI
 
 [![Tests](https://github.com/CalumMallorie/convo-ai/actions/workflows/test.yml/badge.svg)](https://github.com/CalumMallorie/convo-ai/actions/workflows/test.yml)
-[![codecov](https://codecov.io/gh/CalumMallorie/convo-ai/branch/main/graph/badge.svg)](https://codecov.io/gh/CalumMallorie/convo-ai)
 [![Dependencies](https://github.com/CalumMallorie/convo-ai/actions/workflows/dependencies.yml/badge.svg)](https://github.com/CalumMallorie/convo-ai/actions/workflows/dependencies.yml)
 
 A locally-hosted AI assistant that combines lightweight language models with text-to-speech capabilities.

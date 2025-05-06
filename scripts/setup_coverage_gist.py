@@ -55,14 +55,14 @@ def main():
     print("\nCreating coverage Gist...")
     gist_id = create_coverage_gist(token)
     
-    print("\nSetup complete! Add these secrets to your GitHub repository:")
-    print(f"GIST_SECRET: {token}")
+    print("\nSetup complete! Add this secret to your GitHub repository:")
     print(f"COVERAGE_GIST_ID: {gist_id}")
-    print("\nTo add these secrets:")
+    print("\nTo add this secret:")
     print("1. Go to your repository on GitHub")
     print("2. Click Settings > Secrets and variables > Actions")
     print("3. Click 'New repository secret'")
-    print("4. Add each secret with its corresponding value")
+    print("4. Add the secret with its value")
+    print("\nNote: The GITHUB_TOKEN is automatically provided by GitHub Actions")
 
 if __name__ == "__main__":
     main() 

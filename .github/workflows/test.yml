@@ -32,24 +32,19 @@ jobs:
         coverage xml
         coverage html
         
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v4
-      with:
-        file: ./coverage.xml
-        fail_ci_if_error: true
-        
     - name: Archive code coverage results
       uses: actions/upload-artifact@v4
       with:
         name: code-coverage-report
         path: htmlcov/
         
-    - name: Update coverage badge
-      uses: schneegans/dynamic-badges-action@v1.7.0
+    - name: Generate coverage badge
+      uses: RubbaBoy/BYOB@v1.3.0
       with:
-        auth: ${{ secrets.GIST_SECRET }}
-        gistID: ${{ secrets.COVERAGE_GIST_ID }}
-        filename: coverage.json
-        label: coverage
-        message: ${{ env.COVERAGE }}
-        color: ${{ env.COVERAGE_COLOR }} 
+        NAME: coverage
+        LABEL: coverage
+        STATUS: ${{ steps.coverage.outputs.coverage }}
+        COLOR: ${{ steps.coverage.outputs.color }}
+        GIST_FILENAME: coverage.json
+        GIST_ID: ${{ secrets.COVERAGE_GIST_ID }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
