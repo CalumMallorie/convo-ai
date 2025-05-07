@@ -24,6 +24,8 @@ jobs:
         pip install -r requirements.txt
         
     - name: Run tests with coverage
+      env:
+        OPENAI_API_KEY: "sk-mock-key-for-testing-only"
       run: |
         mkdir -p reports/coverage
         python -m pytest --cov=. --cov-report=term-missing --cov-report=xml:reports/coverage/coverage.xml
