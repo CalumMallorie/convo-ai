@@ -1,4 +1,4 @@
-name: Tests
+name: Run Tests
 
 on:
   push:
@@ -9,17 +9,14 @@ on:
 jobs:
   test:
     runs-on: macos-latest
-    strategy:
-      matrix:
-        python-version: ["3.13"]
-
+    
     steps:
     - uses: actions/checkout@v4
     
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: "3.13"
         
     - name: Install dependencies
       run: |
@@ -28,23 +25,13 @@ jobs:
         
     - name: Run tests with coverage
       run: |
-        coverage run -m pytest
-        coverage xml
-        coverage html
+        python -m pytest --cov=src --cov-report=term-missing --cov-report=xml:reports/coverage/coverage.xml
         
-    - name: Archive code coverage results
-      uses: actions/upload-artifact@v4
-      with:
-        name: code-coverage-report
-        path: htmlcov/
-        
-    - name: Generate coverage badge
-      uses: RubbaBoy/BYOB@v1.3.0
-      with:
-        NAME: coverage
-        LABEL: coverage
-        STATUS: ${{ steps.coverage.outputs.coverage }}
-        COLOR: ${{ steps.coverage.outputs.color }}
-        GIST_FILENAME: coverage.json
-        GIST_ID: ${{ secrets.COVERAGE_GIST_ID }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+    - name: Update coverage Gist
+      if: github.ref == 'refs/heads/main'
+      env:
+        GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
+        GIST_ID: ${{ secrets.GIST_ID }}
+      run: |
+        python scripts/update_coverage_gist.py
+        python scripts/generate_coverage_badge.py 
