@@ -1,0 +1,11 @@
+{
+  "timestamp": "2025-05-07T08:51:49.079791",
+  "model": "phi",
+  "prompt": "Test prompt",
+  "response": "Test response",
+  "parameters": {
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 2048
+  }
+}

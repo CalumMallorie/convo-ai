@@ -1,0 +1,994 @@
+{
+  "llm_generate_time": [
+    {
+      "timestamp": "2025-05-07T08:36:35.365432",
+      "value": 7.500057108700275e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:35.409037",
+      "value": 3.7500285543501377e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:35.422532",
+      "value": 2.500019036233425e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:35.431367",
+      "value": 2.0899460650980473e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:35.432293",
+      "value": 2.500019036233425e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.172267",
+      "value": 2.0899460650980473e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.190163",
+      "value": 2.0797597244381905e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.197206",
+      "value": 3.3300602808594704e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.201541",
+      "value": 1.6600824892520905e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.207184",
+      "value": 2.500019036233425e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.212894",
+      "value": 2.500019036233425e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.219575",
+      "value": 2.500019036233425e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.005897",
+      "value": 3.6249984987080097e-06,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.007878",
+      "value": 4.169996827840805e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.048738",
+      "value": 2.0800507627427578e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.058606",
+      "value": 2.0899460650980473e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.059688",
+      "value": 2.500019036233425e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.163104",
+      "value": 4.5797787606716156e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.179764",
+      "value": 6.250047590583563e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.184047",
+      "value": 2.500019036233425e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.188151",
+      "value": 3.7500285543501377e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.191996",
+      "value": 2.0902371034026146e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:04.910953",
+      "value": 1.3750104699283838e-06,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:04.912738",
+      "value": 2.0797597244381905e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:04.955218",
+      "value": 3.33995558321476e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:04.965570",
+      "value": 3.3300602808594704e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:04.966736",
+      "value": 2.500019036233425e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.672095",
+      "value": 3.7500285543501377e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.696582",
+      "value": 4.580069798976183e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.707188",
+      "value": 2.9098009690642357e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.713696",
+      "value": 2.9199873097240925e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.714535",
+      "value": 2.0797597244381905e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.721528",
+      "value": 1.66997779160738e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.727808",
+      "value": 3.7497375160455704e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.734178",
+      "value": 2.0800507627427578e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.741106",
+      "value": 2.9199873097240925e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.747110",
+      "value": 2.0899460650980473e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:39.668501",
+      "value": 1.0830117389559746e-06,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:39.669979",
+      "value": 2.9199873097240925e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:39.700713",
+      "value": 1.66997779160738e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:39.710900",
+      "value": 3.329769242554903e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:39.712525",
+      "value": 2.500019036233425e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.903225",
+      "value": 4.169996827840805e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.911073",
+      "value": 2.0899460650980473e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.919105",
+      "value": 2.9199873097240925e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.926581",
+      "value": 2.500019036233425e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.927785",
+      "value": 2.500019036233425e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.935580",
+      "value": 2.0800507627427578e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.942337",
+      "value": 1.66997779160738e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.949039",
+      "value": 1.66997779160738e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.957059",
+      "value": 1.6702688299119473e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.963628",
+      "value": 4.169996827840805e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:45.880213",
+      "value": 3.7500285543501377e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:48.770509",
+      "value": 6.67001586407423e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:48.780706",
+      "value": 4.169996827840805e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:48.805332",
+      "value": 4.580069798976183e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:48.822432",
+      "value": 5.410111043602228e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:48.828573",
+      "value": 2.9199873097240925e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.014213",
+      "value": 4.5899651013314724e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.029307",
+      "value": 5.00003807246685e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.042242",
+      "value": 5.00003807246685e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.052703",
+      "value": 2.500019036233425e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.058041",
+      "value": 2.910092007368803e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.070479",
+      "value": 6.95799826644361e-06,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.080870",
+      "value": 2.0800507627427578e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.092387",
+      "value": 2.9199873097240925e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.104568",
+      "value": 2.500019036233425e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.114562",
+      "value": 2.0899460650980473e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.207024",
+      "value": 5.839974619448185e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.866671",
+      "value": 3.082997864112258e-06,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:51.828206",
+      "value": 1.2909877113997936e-06,
+      "function": "generate"
+    }
+  ],
+  "llm_generate_memory": [
+    {
+      "timestamp": "2025-05-07T08:36:35.365661",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:35.409186",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:35.422679",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:35.431544",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:35.432393",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.172479",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.190385",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.197466",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.201732",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.207349",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.213124",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.219787",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.006187",
+      "value": 0.03125,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.008128",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.049011",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.058828",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.059866",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.163360",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.180025",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.184342",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.188457",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.192249",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:04.911284",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:04.912991",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:04.955549",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:04.965849",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:04.966989",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.672575",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.696936",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.707565",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.713985",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.714805",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.721843",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.728158",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.734503",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.741489",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.747441",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:39.668880",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:39.670328",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:39.701133",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:39.711349",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:39.712882",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.903692",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.911467",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.919579",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.927043",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.928213",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.936029",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.942789",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.949479",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.957517",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.964170",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:45.883043",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:48.774418",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:48.783973",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:48.808108",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:48.825024",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:48.830851",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.016698",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.031716",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.044583",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.055159",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.060416",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.072906",
+      "value": 0.015625,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.083483",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.094869",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.107018",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.117112",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.209501",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.871856",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:51.836020",
+      "value": 0.0,
+      "function": "generate"
+    }
+  ],
+  "llm_stream_time": [
+    {
+      "timestamp": "2025-05-07T08:36:46.048297",
+      "value": 2.499727997928858e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.144283",
+      "value": 7.499766070395708e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.145223",
+      "value": 5.00003807246685e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.157142",
+      "value": 2.499727997928858e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.164735",
+      "value": 2.9199873097240925e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.061062",
+      "value": 2.0902371034026146e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.135138",
+      "value": 2.500019036233425e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.135912",
+      "value": 2.500019036233425e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.146365",
+      "value": 1.66997779160738e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.156104",
+      "value": 2.0800507627427578e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:04.968173",
+      "value": 2.500019036233425e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.632935",
+      "value": 1.167005393654108e-06,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.635759",
+      "value": 9.579816833138466e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.652313",
+      "value": 2.0800507627427578e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.664142",
+      "value": 1.6600824892520905e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:39.714283",
+      "value": 2.0800507627427578e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.870526",
+      "value": 2.9199873097240925e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.871580",
+      "value": 2.0800507627427578e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.881799",
+      "value": 2.0800507627427578e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.894573",
+      "value": 3.7500285543501377e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:47.908714",
+      "value": 1.7920101527124643e-06,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:48.835614",
+      "value": 3.7500285543501377e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:48.955120",
+      "value": 5.830079317092896e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:48.962711",
+      "value": 3.7500285543501377e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:48.983425",
+      "value": 3.3300602808594704e-07,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:48.998828",
+      "value": 3.7500285543501377e-07,
+      "function": "generate_stream"
+    }
+  ],
+  "llm_stream_memory": [
+    {
+      "timestamp": "2025-05-07T08:36:46.048535",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.144650",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.145557",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.157334",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:36:46.165095",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.061250",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.135377",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.136099",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.146603",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:38:21.156373",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:04.968425",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.634184",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.636871",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.652705",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:40:06.664506",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:39.714675",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.870983",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.871970",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.885458",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:41:40.895050",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:47.916221",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:48.838010",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:48.958924",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:48.965935",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:48.986444",
+      "value": 0.0,
+      "function": "generate_stream"
+    },
+    {
+      "timestamp": "2025-05-07T08:51:49.001628",
+      "value": 0.0,
+      "function": "generate_stream"
+    }
+  ],
+  "test_func_time": [
+    {
+      "timestamp": "2025-05-07T08:50:44.835559",
+      "value": 0.10501766600646079,
+      "function": "test_function"
+    }
+  ],
+  "test_func_memory": [
+    {
+      "timestamp": "2025-05-07T08:50:44.837661",
+      "value": 0.0,
+      "function": "test_function"
+    }
+  ]
+}

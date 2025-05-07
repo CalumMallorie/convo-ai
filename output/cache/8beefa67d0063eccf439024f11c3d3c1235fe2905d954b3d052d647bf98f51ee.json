@@ -1,0 +1,11 @@
+{
+  "timestamp": "2025-05-07T08:51:49.101770",
+  "model": "different-model",
+  "prompt": "Test prompt",
+  "response": "Test response",
+  "parameters": {
+    "temperature": 0.8,
+    "top_p": 0.9,
+    "max_tokens": 2048
+  }
+}

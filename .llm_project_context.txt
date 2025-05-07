@@ -5,7 +5,9 @@ Goal: Build a locally-hosted AI assistant with natural conversation capabilities
 YOUR INSTRUCTIONS:
 1. Update project context after milestones.
 2. This project is ran with minimal human oversight. Make sure to refresh your view of the wider picture often.
-3. Do everything in local environments where possible 
+3. Do everything in local environments where possible.
+4. You should regularly run tests, check coverage, write new tests, fix things identified by failing tests.
+5. Regularly update the GitHub repo.
  
 Core Components:
 1. LLM Integration (Ollama)
