@@ -25,6 +25,7 @@ jobs:
         
     - name: Run tests with coverage
       run: |
+        mkdir -p reports/coverage
         python -m pytest --cov=src --cov-report=term-missing --cov-report=xml:reports/coverage/coverage.xml
         
     - name: Update coverage Gist
