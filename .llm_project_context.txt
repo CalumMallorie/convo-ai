@@ -8,6 +8,11 @@ YOUR INSTRUCTIONS:
 3. Do everything in local environments where possible.
 4. You should regularly run tests, check coverage, write new tests, fix things identified by failing tests.
 5. Regularly update the GitHub repo.
+6. IMPORTANT: Always check and update reports in reports/ directory:
+   - Update test_plan.md when modifying test coverage
+   - Update progress_report.md weekly with new metrics
+   - Use reports/demos/ for example code
+   - Keep metrics up to date using @benchmark decorator
  
 Core Components:
 1. LLM Integration (Ollama)
@@ -34,12 +39,13 @@ Core Components:
    - Coverage reporting and badge integration ✓
    - Error handling validation ✓
    - Mock LLM service in CI environment ✓
+   - Performance benchmarking system ✓
 
 5. Project Management
-   - Progress tracking
-   - Performance metrics
-   - Demo scripts
-   - Documentation
+   - Progress tracking via reports/ ✓
+   - Performance metrics via benchmarks.py ✓
+   - Demo scripts ✓
+   - Documentation ✓
 
 Development Guidelines:
 1. Code Style
@@ -50,21 +56,24 @@ Development Guidelines:
 
 2. Testing
    - Write tests for all new features ✓
-   - Maintain high coverage (target 70%+) ✓
+   - Maintain high coverage (target 90%+) ✓
    - Include edge cases ✓
    - Mock services in CI environment ✓
+   - Track test progress in test_plan.md
 
 3. Performance
-   - Monitor memory usage
-   - Track response times
+   - Monitor memory usage via @benchmark
+   - Track response times via @benchmark
    - Optimize for M-series chips
    - Profile critical paths
+   - Record metrics in progress_report.md
 
 4. Documentation
    - Keep README updated
    - Document API changes
    - Include usage examples
    - Maintain changelog
+   - Update reports/ regularly
 
 Current Status:
 - LLM client with streaming support ✓
@@ -72,12 +81,14 @@ Current Status:
 - Comprehensive test suite ✓
 - Configuration system ✓
 - CI integration with GitHub Actions ✓
-- Test coverage reporting (89%) ✓
+- Test coverage reporting (92%) ✓
 - Mock LLM service in CI ✓
+- Performance benchmarks ✓
+- Demo scripts ✓
+- Progress tracking system ✓
 
 Next Steps:
-1. Add performance benchmarks
-2. Create demo scripts
-3. Enhance documentation
-4. Implement caching for LLM responses to improve performance
-5. Add support for audio input (speech-to-text)
+1. Improve Native TTS module test coverage
+2. Add stress testing capabilities
+3. Implement automated performance regression detection
+4. Add more cache module edge case tests

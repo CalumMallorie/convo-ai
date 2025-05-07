@@ -1,14 +1,14 @@
 # Test Coverage Improvement Plan
 
 ## Current Status (Updated)
-- Overall coverage: 59% (improved from 40%)
-- 37 tests passing (increased from 30)
-- 10 source files
+- Overall coverage: 92% (improved from 59%)
+- 71 tests passing (increased from 37)
+- 12 source files
 
 ## Progress
 
 ### Completed
-1. LLM Module (83% coverage)
+1. LLM Module (87% coverage)
    - Added streaming response tests
    - Added error handling tests
    - Added timeout tests
@@ -34,18 +34,23 @@
    - Added environment loading tests
    - Added default value tests
 
-### In Progress
-1. Moderation Module (86% coverage)
-   - Add more error handling tests
-   - Add rate limiting tests
-   - Add category validation tests
-   - Add integration tests
+5. Benchmarks Module (100% coverage)
+   - Added performance tracking tests
+   - Added metric recording tests
+   - Added file I/O tests
+   - Added decorator tests
 
-2. Native TTS Module (0% coverage)
+### In Progress
+1. Native TTS Module (17% coverage)
    - Add model loading tests
    - Add audio generation tests
    - Add MPS device tests
    - Add error handling tests
+
+2. Cache Module (93% coverage)
+   - Add more edge case tests
+   - Add concurrent access tests
+   - Add cleanup tests
 
 ## Test Categories
 
@@ -62,41 +67,43 @@
 - Test error propagation
 
 ### Performance Tests
-- Test response times
-- Test resource usage
+- Test response times (using @benchmark decorator)
+- Test resource usage (memory, CPU)
 - Test concurrent operations
 - Test memory management
+- Track metrics over time
 
 ## Implementation Plan
 
-1. Week 1: Moderation Module
-   - Add error handling tests
-   - Add rate limiting tests
-   - Add category validation tests
-
-2. Week 2: Native TTS Module
+1. Week 1: Native TTS Module
    - Add model loading tests
    - Add audio generation tests
    - Add device usage tests
 
+2. Week 2: Cache Module
+   - Add edge case tests
+   - Add concurrent access tests
+   - Add cleanup tests
+
 3. Week 3: Performance Testing
-   - Add response time benchmarks
-   - Add resource usage tests
-   - Add concurrency tests
+   - Add more benchmark tests
+   - Add stress tests
+   - Add long-running tests
 
 ## Success Criteria
-- Overall coverage > 80%
-- All critical paths tested
-- Error conditions covered
-- Performance benchmarks established
+- Overall coverage > 90% ✓
+- All critical paths tested ✓
+- Error conditions covered ✓
+- Performance benchmarks established ✓
 
 ## Monitoring
-- Daily coverage reports
-- Weekly progress reviews
+- Daily coverage reports via GitHub Actions ✓
+- Weekly progress reviews via reports/progress_report.md
 - Monthly test plan updates
+- Performance tracking via benchmarks.py
 
 ## Next Steps
-1. Complete moderation module tests
-2. Set up performance benchmarks
-3. Add integration tests between components
-4. Document test coverage improvements 
+1. Complete native TTS module tests
+2. Add more cache module tests
+3. Implement automated performance regression testing
+4. Add stress test suite 
