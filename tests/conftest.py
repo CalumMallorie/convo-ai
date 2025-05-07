@@ -1,5 +1,9 @@
 import pytest
+import os
 from src.config import Config, LLMConfig, TTSConfig, MacConfig
+from unittest.mock import patch, AsyncMock
+import httpx
+from src.llm import LLMResponse
 
 @pytest.fixture
 def test_config() -> Config:
@@ -38,3 +42,27 @@ def test_tts_config(test_config: Config) -> TTSConfig:
 def test_mac_config(test_config: Config) -> MacConfig:
     """Get Mac configuration for testing."""
     return test_config.mac
+
+@pytest.fixture(autouse=True)
+def mock_llm_in_ci():
+    """Mock the LLM client in CI environments to prevent connection failures."""
+    # Only mock in CI environment
+    if os.environ.get('CI') == 'true':
+        # Create a mock response with streaming data
+        async def mock_aiter_lines():
+            yield '{"response": "This is a mock response"}'
+            yield '{"response": " from the CI environment."}'
+        
+        # Create the mock response
+        mock_response = httpx.Response(200)
+        mock_response.aiter_lines = mock_aiter_lines
+        
+        # Create the async mock for the post method
+        async_mock = AsyncMock(return_value=mock_response)
+        
+        # Apply the patch for httpx.AsyncClient.post
+        with patch.object(httpx.AsyncClient, 'post', async_mock):
+            yield
+    else:
+        # No mocking outside CI
+        yield

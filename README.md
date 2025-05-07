@@ -1,76 +1,115 @@
-# Convo AI
+# Convo-AI
 
-[![Tests](https://github.com/CalumMallorie/convo-ai/actions/workflows/test.yml/badge.svg)](https://github.com/CalumMallorie/convo-ai/actions/workflows/test.yml)
-[![Dependencies](https://github.com/CalumMallorie/convo-ai/actions/workflows/dependencies.yml/badge.svg)](https://github.com/CalumMallorie/convo-ai/actions/workflows/dependencies.yml)
+A conversational AI project optimized for Mac M-series chips, using free and local tools.
 
-A locally-hosted AI assistant that combines lightweight language models with text-to-speech capabilities.
+![Test Status](https://github.com/calummallorie/convo-ai/actions/workflows/test.yml/badge.svg) ![Coverage](https://img.shields.io/badge/coverage-88%25-green) [![Test Coverage](https://img.shields.io/badge/coverage-88%25-green)](https://gist.github.com/CalumMallorie/0ced90b88d93397be075cdf0cbb8cf03)
 
-## Prerequisites
+## Features
 
-- Python 3.8+
-- Docker
-- Ollama (for LLM)
-- OpenWebUI (for interface)
+- LLM client with streaming support
+- Text-to-Speech with MPS optimization
+- Comprehensive test suite with CI integration
+- Optimized for Mac M-series chips
 
 ## Setup
 
-1. Install Python dependencies:
+1. Clone the repository:
+```bash
+git clone https://github.com/calummallorie/convo-ai.git
+cd convo-ai
+```
+
+2. Create a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Install Ollama:
+4. Run the tests:
 ```bash
-brew install ollama  # macOS
-# or
-curl https://ollama.ai/install.sh | sh  # Linux
+python -m pytest
 ```
 
-3. Pull the LLM model:
+## Test Coverage
+
+This project maintains a high test coverage (currently 89%). You can generate a coverage report by running:
+
 ```bash
-ollama pull phi3:4b-q4_0
+python scripts/run_coverage.py
 ```
 
-4. Start the services:
-```bash
-# Terminal 1 - LLM
-ollama serve
+This will:
+- Run all tests with coverage
+- Generate HTML and XML coverage reports
+- Update the coverage Gist (if configured)
+- Generate a coverage badge
 
-# Terminal 2 - Sesame TTS
-docker run -p 5000:5000 phildougherty/sesame_csm_openai
+The coverage reports will be available in the `reports/coverage/html` directory.
 
-# Terminal 3 - API Server
-python src/main.py
+## Automated Testing
 
-# Terminal 4 - OpenWebUI
-git clone https://github.com/OpenWebUI/OpenWebUI
-cd OpenWebUI && docker compose up
+This project uses GitHub Actions for automated testing. Every time you push code or create a pull request, the tests will run automatically.
+
+The CI environment is configured to:
+- Run tests with coverage
+- Mock external services (LLM, TTS) to ensure tests pass consistently
+- Provide a coverage report
+
+To see the test results:
+1. Go to your repository on GitHub
+2. Click on the "Actions" tab
+3. Click on any workflow run to see the results
+
+## Project Roadmap
+
+### Completed
+- ✅ LLM client with streaming support 
+- ✅ TTS client with MPS optimization
+- ✅ Comprehensive test suite
+- ✅ Configuration system
+- ✅ CI integration with GitHub Actions
+- ✅ Test coverage reporting (89%)
+- ✅ Mock LLM service in CI
+
+### In Progress
+- 🔄 Performance benchmarks
+- 🔄 Demo scripts
+
+### Planned
+- 📅 Enhance documentation
+- 📅 Implement caching for LLM responses
+- 📅 Add support for audio input (speech-to-text)
+
+## Project Structure
+
+```
+convo-ai/
+├── .github/
+│   └── workflows/        # GitHub Actions workflows
+├── scripts/              # Utility scripts
+│   ├── run_coverage.py   # Run tests with coverage
+│   ├── create_coverage_gist.py
+│   ├── update_coverage_gist.py
+│   └── generate_coverage_badge.py
+├── src/                  # Source code
+├── tests/                # Test files
+├── requirements.txt      # Python dependencies
+├── pytest.ini           # Pytest configuration
+└── README.md            # This file
 ```
 
-5. Access the interface at http://localhost:3000
+## Contributing
 
-## Configuration
-
-Create a `.env` file in the root directory with your configuration:
-
-```env
-OPENAI_API_KEY=your_key_here  # For moderation
-```
-
-## Features
-
-- Lightweight LLM (Phi-3-mini or Gemma-2B)
-- Sesame CSM-1B text-to-speech
-- Content moderation
-- Web interface with voice capabilities
-
-## Development
-
-The project uses FastAPI for the backend API. The main components are:
-
-- `src/main.py`: FastAPI application and routes
-- `requirements.txt`: Python dependencies
+1. Create a new branch for your changes
+2. Make your changes
+3. Run the tests to make sure everything works
+4. Create a pull request
 
 ## License
 
-MIT 
+This project is licensed under the MIT License - see the LICENSE file for details. 

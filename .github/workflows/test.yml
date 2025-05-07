@@ -26,6 +26,7 @@ jobs:
     - name: Run tests with coverage
       env:
         OPENAI_API_KEY: "sk-mock-key-for-testing-only"
+        CI: "true"
       run: |
         mkdir -p reports/coverage
         python -m pytest --cov=. --cov-report=term-missing --cov-report=xml:reports/coverage/coverage.xml
