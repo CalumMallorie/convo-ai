@@ -354,6 +354,36 @@
       "timestamp": "2025-05-07T08:51:51.828206",
       "value": 1.2909877113997936e-06,
       "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T09:04:05.131010",
+      "value": 2.9199873097240925e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T09:04:51.854327",
+      "value": 3.7500285543501377e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T09:05:35.809667",
+      "value": 4.169996827840805e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T09:05:56.953956",
+      "value": 3.3300602808594704e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T09:06:40.317082",
+      "value": 3.33995558321476e-07,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T09:07:19.050699",
+      "value": 3.7497375160455704e-07,
+      "function": "generate"
     }
   ],
   "llm_generate_memory": [
@@ -711,6 +741,36 @@
       "timestamp": "2025-05-07T08:51:51.836020",
       "value": 0.0,
       "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T09:04:05.131505",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T09:04:51.854861",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T09:05:35.810294",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T09:05:56.954520",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T09:06:40.317659",
+      "value": 0.0,
+      "function": "generate"
+    },
+    {
+      "timestamp": "2025-05-07T09:07:19.051301",
+      "value": 0.0,
+      "function": "generate"
     }
   ],
   "llm_stream_time": [
@@ -989,6 +1049,258 @@
       "timestamp": "2025-05-07T08:50:44.837661",
       "value": 0.0,
       "function": "test_function"
+    }
+  ],
+  "gpu_layer_config_time": [
+    {
+      "timestamp": "2025-05-07T09:04:51.857820",
+      "value": 9.160139597952366e-07,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:04:51.860371",
+      "value": 6.67001586407423e-07,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:04:51.862146",
+      "value": 4.169996827840805e-07,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:04:55.140172",
+      "value": 7.089984137564898e-07,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:05:35.813273",
+      "value": 9.170034900307655e-07,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:05:35.815809",
+      "value": 6.249756552278996e-07,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:05:35.817628",
+      "value": 4.580069798976183e-07,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:05:35.996784",
+      "value": 7.909839041531086e-07,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:05:56.957285",
+      "value": 9.169743862003088e-07,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:05:56.960117",
+      "value": 7.920025382190943e-07,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:05:56.962204",
+      "value": 9.170034900307655e-07,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:05:57.434698",
+      "value": 7.910130079835653e-07,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:06:40.320566",
+      "value": 8.750066626816988e-07,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:06:40.329178",
+      "value": 9.170034900307655e-07,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:06:40.331280",
+      "value": 4.580069798976183e-07,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:07:19.054530",
+      "value": 9.590003173798323e-07,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:07:19.057438",
+      "value": 7.079797796905041e-07,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:07:19.059632",
+      "value": 5.420006345957518e-07,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:07:19.299854",
+      "value": 5.839974619448185e-07,
+      "function": "configure_layer"
+    }
+  ],
+  "gpu_layer_config_memory": [
+    {
+      "timestamp": "2025-05-07T09:04:51.858402",
+      "value": 0.0,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:04:51.860918",
+      "value": 0.0,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:04:51.862686",
+      "value": 0.0,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:04:55.140729",
+      "value": 0.0,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:05:35.813849",
+      "value": 0.0,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:05:35.816356",
+      "value": 0.0,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:05:35.818189",
+      "value": 0.0,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:05:35.997394",
+      "value": 0.0,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:05:56.957887",
+      "value": 0.0,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:05:56.960715",
+      "value": 0.0,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:05:56.962827",
+      "value": 0.0,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:05:57.435265",
+      "value": 0.0,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:06:40.321205",
+      "value": 0.0,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:06:40.329817",
+      "value": 0.0,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:06:40.331932",
+      "value": 0.0,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:07:19.055194",
+      "value": 0.0,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:07:19.058095",
+      "value": 0.0,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:07:19.060325",
+      "value": 0.0,
+      "function": "configure_layer"
+    },
+    {
+      "timestamp": "2025-05-07T09:07:19.300482",
+      "value": 0.0,
+      "function": "configure_layer"
+    }
+  ],
+  "gpu_model_optimization_time": [
+    {
+      "timestamp": "2025-05-07T09:05:57.220982",
+      "value": 0.2567844160075765,
+      "function": "optimize_model_layers"
+    },
+    {
+      "timestamp": "2025-05-07T09:06:40.419089",
+      "value": 0.0857176249846816,
+      "function": "optimize_model_layers"
+    },
+    {
+      "timestamp": "2025-05-07T09:07:19.227158",
+      "value": 0.1653177500120364,
+      "function": "optimize_model_layers"
+    }
+  ],
+  "gpu_model_optimization_memory": [
+    {
+      "timestamp": "2025-05-07T09:05:57.221734",
+      "value": 17.84375,
+      "function": "optimize_model_layers"
+    },
+    {
+      "timestamp": "2025-05-07T09:06:40.419814",
+      "value": 11.859375,
+      "function": "optimize_model_layers"
+    },
+    {
+      "timestamp": "2025-05-07T09:07:19.228086",
+      "value": 10.9375,
+      "function": "optimize_model_layers"
+    }
+  ],
+  "gpu_layer_performance_time": [
+    {
+      "timestamp": "2025-05-07T09:07:19.294352",
+      "value": 6.660120561718941e-07,
+      "function": "get_layer_performance"
+    },
+    {
+      "timestamp": "2025-05-07T09:07:19.296376",
+      "value": 4.5797787606716156e-07,
+      "function": "get_layer_performance"
+    }
+  ],
+  "gpu_layer_performance_memory": [
+    {
+      "timestamp": "2025-05-07T09:07:19.294981",
+      "value": 0.0,
+      "function": "get_layer_performance"
+    },
+    {
+      "timestamp": "2025-05-07T09:07:19.297059",
+      "value": 0.0,
+      "function": "get_layer_performance"
     }
   ]
 }
