@@ -3,7 +3,7 @@ import pytest
 from dotenv import load_dotenv
 
 def test_dotenv_loading():
-    """Test that .env file is loaded correctly."""
+    """Test that the .env file is properly loaded and parsed."""
     load_dotenv()
     # Just check that the function runs without errors
     assert True
