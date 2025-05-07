@@ -4,6 +4,8 @@ import os
 from pathlib import Path
 from pydantic import BaseModel
 from config import Config, TTSConfig, MacConfig
+from src.mac_optimizations import MPSOptimizer, GPULayerConfig
+from src.benchmarks import benchmark
 
 class TTSResponse(BaseModel):
     """Response from the TTS service."""
@@ -24,10 +26,8 @@ class NativeTTSClient:
         self.config = config or Config.load().tts
         self.mac_config = mac_config or Config.load().mac
         
-        # Set up device
-        if not torch.backends.mps.is_available():
-            raise RuntimeError("MPS (Metal Performance Shaders) is not available")
-        self.device = torch.device("mps")
+        # Set up MPS optimizer
+        self.mps_optimizer = MPSOptimizer(self.mac_config)
         
         # Create output directory
         self.output_dir = Path("output/audio")
@@ -37,15 +37,38 @@ class NativeTTSClient:
         self.model = None
         self._load_model()
     
+    @benchmark
     def _load_model(self) -> None:
-        """Load the TTS model."""
+        """Load and optimize the TTS model."""
         try:
             # This is a placeholder - actual implementation will depend on CSM-1B
             # We'll need to implement this once we have access to the model
-            pass
+            
+            # Configure GPU layers for the model
+            if self.model is not None:
+                # Configure encoder layers
+                encoder_config = GPULayerConfig(
+                    layer_name="encoder",
+                    precision="float16",  # Use half precision for efficiency
+                    memory_format="channels_last"  # Optimize for convolutions
+                )
+                self.mps_optimizer.configure_layer("encoder", encoder_config)
+                
+                # Configure decoder layers
+                decoder_config = GPULayerConfig(
+                    layer_name="decoder",
+                    precision="float16",
+                    memory_format="contiguous"  # Standard format for transformers
+                )
+                self.mps_optimizer.configure_layer("decoder", decoder_config)
+                
+                # Apply optimizations
+                self.model = self.mps_optimizer.optimize_model_layers(self.model)
+            
         except Exception as e:
             raise RuntimeError(f"Failed to load TTS model: {str(e)}")
     
+    @benchmark
     async def generate_speech(self, text: str) -> TTSResponse:
         """
         Generate speech from text.
@@ -61,8 +84,14 @@ class NativeTTSClient:
             # We'll need to implement this once we have access to the model
             output_path = self.output_dir / f"speech_{hash(text)}.wav"
             
-            # Placeholder for actual TTS generation
-            # self.model.generate(text, output_path)
+            if self.model is not None:
+                # Get performance metrics for monitoring
+                encoder_metrics = self.mps_optimizer.get_layer_performance("encoder")
+                decoder_metrics = self.mps_optimizer.get_layer_performance("decoder")
+                
+                # Log performance metrics (placeholder)
+                print(f"Encoder metrics: {encoder_metrics}")
+                print(f"Decoder metrics: {decoder_metrics}")
             
             return TTSResponse(audio_path=str(output_path))
         except Exception as e:
@@ -72,4 +101,5 @@ class NativeTTSClient:
         """Clean up resources."""
         if self.model is not None:
             del self.model
+            self.mps_optimizer.cleanup()
             torch.mps.empty_cache() 
